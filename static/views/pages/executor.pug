@@ -7,16 +7,16 @@ block content
   div(class='breadcrumb')
     li= title
   div#customer-add-form-wrapper
-    button(type='button', class='btn btn-primary', id='add-project-btn') Add Project
+    button(type='button', class='btn btn-primary', id='add-executor-btn') Add Executor
     div#add-modal.modal.fade(tabindex='-1', role='dialog')
       div.modal-dialog(role='document')
         div.modal-content
           div.modal-header
-            h5.modal-title Add Project
+            h5.modal-title Add Executor
             button.close(type='button', data-dismiss='modal', aria-label='Close')
               span(aria-hidden='true') &times;
           div.modal-body
-            form(id='project-add-form' name='project-add-form' class='form-inline' action='')
+            form(id='executor-add-form' name='executor-add-form' class='form-inline' action='')
               div.form-group
                 div.col-md-3
                   label(for='name') Name
@@ -24,20 +24,20 @@ block content
                   input#name.form-control(name='name', value='')
               div.form-group
                 div.col-md-3
-                  label(for='description') Description
+                  label(for='exp') Exp
                 div.col-md-9
-                  input#budget.form-control(name='description', value='')
+                  input#budget.form-control(name='exp', value='')
               div.form-group
                 div.col-md-3
-                  label(for='customer-select') Customer
-                div.col-md-10
-                  select#customer-select.form-control(name='customer')
+                  label(for='workers') Workers
+                div.col-md-9
+                  input#budget.form-control(name='workers', value='')
           div.modal-footer
             button.btn.btn-secondary(type='button', data-dismiss='modal') Close
-            button.btn.btn-primary(type='submit', form='project-add-form') Add Project
+            button.btn.btn-primary(type='submit', form='executor-add-form') Add Executor
 
   div.list-wrapper
-    table(id='project-list')
+    table(id='executor-list')
   
   div#edit-modal-backdrop.modal-backdrop
 
@@ -47,22 +47,24 @@ block content
         div(class='modal-header')
           button(type='button' class='close' data-dismiss='modal' aria-label='Close')
             span(aria-hidden='true') &times;
-          h4(class='modal-title') Edit Project
+          h4(class='modal-title') Edit Executor
         div(class='modal-body')
-          form(id='project-edit-form' name='project-edit-form' class='form-inline' action='')
+          form(id='executor-edit-form' name='executor-edit-form' class='form-inline' action='')
             input(type='hidden' id='edit-id' name='id')
             div(class='form-group')
               label(for='edit-name') Name
               input(id='edit-name' name='name' value='' class='form-control')
             div(class='form-group')
-              label(for='edit-description') Description
-              input(id='edit-description' name='description' value='' class='form-control')
+              label(for='edit-exp') Exp
+              input(id='edit-exp' name='exp' value='' class='form-control')
+            div(class='form-group')
+              label(for='edit-workers') Workers
+              input(id='edit-workers' name='workers' value='' class='form-control')
         div(class='modal-footer')
           button(type='button' class='btn btn-default' data-dismiss='modal') Close
-          button(type='submit' form='project-edit-form' class='btn btn-primary') Update
+          button(type='submit' form='executor-edit-form' class='btn btn-primary') Update
 
 block append scripts
-  script(src='/static/js/models/project.js')
+  script(src='/static/js/models/executor.js')
   script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
-  script(src='/static/js/views/project.js')
-  script(src='/static/js/models/customer.js')
+  script(src='/static/js/views/executor.js')

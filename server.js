@@ -18,6 +18,12 @@ app.get('/', function (request, response) {
 app.get('/customer', function (request, response) {
   response.render('pages/customer', { title: 'Customer' })
 })
+app.get('/project', function (request, response) {
+  response.render('pages/project', { title: 'Project' })
+})
+app.get('/executor', function (request, response) {
+  response.render('pages/executor', { title: 'Executor' })
+})
 
 // запускаємо аплікацію
 app.listen(process.env.PORT || 8080)
