@@ -1,0 +1,51 @@
+extends ../layout.pug
+
+block prepend styles
+  link(rel='stylesheet' href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')
+
+block content
+  div(class='breadcrumb')
+    li= title
+  div(id='project-add-form' class='form-inline')
+    div(class='form-group')
+      div(class='col-md-3')
+        label(for='name') Name
+      div(class='col-md-9')
+        input(id='name' name='name' value='' class='form-control')
+    div(class='form-group')
+      div(class='col-md-3')
+        label(for='name') Description
+      div(class='col-md-9')
+        input(id='description' name='description' value='' class='form-control')        
+    div(class='form-group')
+      div(class='col-md-12')
+        button(type='submit' class='btn btn-primary') Create
+  div.list-wrapper
+    table(id='project-list')
+  
+  div#edit-modal-backdrop.modal-backdrop
+
+  div(id='edit-modal' class='modal fade' tabindex='-1' role='dialog')
+    div(class='modal-dialog')
+      div(class='modal-content')
+        div(class='modal-header')
+          button(type='button' class='close' data-dismiss='modal' aria-label='Close')
+            span(aria-hidden='true') &times;
+          h4(class='modal-title') Edit Project
+        div(class='modal-body')
+          form(id='customer-edit-form' name='customer-edit-form' class='form-inline' action='')
+            input(type='hidden' id='edit-id' name='id')
+            div(class='form-group')
+              label(for='edit-name') Name
+              input(id='edit-name' name='name' value='' class='form-control')
+            div(class='form-group')
+              label(for='edit-budget') Budget
+              input(id='edit-budget' name='budget' value='' class='form-control')
+        div(class='modal-footer')
+          button(type='button' class='btn btn-default' data-dismiss='modal') Close
+          button(type='submit' form='customer-edit-form' class='btn btn-primary') Update
+
+block append scripts
+  script(src='/static/js/models/customer.js')
+  script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
+  script(src='/static/js/views/customer.js')

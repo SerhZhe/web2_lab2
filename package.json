@@ -1,0 +1,35 @@
+{
+  "name": "lab2",
+  "version": "1.0.0",
+  "description": "2 lab",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/8Nigel8/sem_4_lab_2.git"
+  },
+  "keywords": [
+    "gaga"
+  ],
+  "author": "8nigel8",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/8Nigel8/sem_4_lab_2/issues"
+  },
+  "homepage": "https://github.com/8Nigel8/sem_4_lab_2#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "eslint": "^8.35.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "pug": "^3.0.2"
+  }
+}
