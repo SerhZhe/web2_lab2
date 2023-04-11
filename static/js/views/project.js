@@ -28,15 +28,12 @@ function initAddForm() {
         formData.forEach((value, key) => {
           projectData[key] = value;
         });
-      
-        console.log('Form data customer:', formData.get('customer')); // Add this line
-        console.log('Parsed form data customer:', parseInt(formData.get('customer'))); // Add this line
-      
+        console.log(formData.get('customer'));
         const selectedCustomer = customers.find(
           (customer) => customer.id == parseInt(formData.get('customer'))
         );
       
-        console.log('Selected customer:', selectedCustomer); // Keep this line
+        console.log(selectedCustomer); // Add this line to debug
       
         projectData.customer = selectedCustomer.name.toString(); // add the selected customer name to the project data
       
@@ -46,7 +43,6 @@ function initAddForm() {
         $('#add-modal').modal('hide');
         $('.modal-backdrop').remove();
       });
-      
 }
 
 function initList() {

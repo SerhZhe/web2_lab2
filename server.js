@@ -24,6 +24,9 @@ app.get('/project', function (request, response) {
 app.get('/executor', function (request, response) {
   response.render('pages/executor', { title: 'Executor' })
 })
+app.get('/runningproject', function (request, response) {
+  response.render('pages/running_project', { title: 'Running Projects' })
+})
 
 // запускаємо аплікацію
 app.listen(process.env.PORT || 8080)
