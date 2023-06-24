@@ -1,0 +1,34 @@
+extends ../layout.pug
+
+block prepend styles
+  link(rel='stylesheet' href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')
+
+block content
+  div(class='breadcrumb')
+    li= title
+  form(id='product-add-form' name='product-add-form' class='form-inline' action='')
+    div(class='form-group')
+      div(class='col-md-3')
+        label(for='name') Code
+      div(class='col-md-9')
+        input(id='code' name='code' value='' class='form-control')
+    div(class='form-group')
+      div(class='col-md-3')
+        label(for='name') Name
+      div(class='col-md-9')
+        input(id='name' name='name' value='' class='form-control')
+    div(class='form-group')
+      div(class='col-md-3')
+        label(for='name') Country
+      div(class='col-md-9')
+        input(id='country' name='country' value='' class='form-control')        
+    div(class='form-group')
+      div(class='col-md-12')
+        button(type='submit' class='btn btn-primary') Create
+    div.list-wrapper
+      table(id='product-list')
+block append scripts
+  script(src='/static/js/models/product.js')
+  script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
+  script(src='/static/js/views/product.js')
+      

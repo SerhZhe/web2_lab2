@@ -2,7 +2,7 @@ include ./mixins/navbar
 doctype html
 html
   head
-    title #{title}
+    title Lab2 - #{title}
     block styles
       link(rel='stylesheet' href='/static/css/main.css')
       link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous")
@@ -10,10 +10,10 @@ html
     block nav#navbar
       +nav('Lab2', 'main_menu')
         +nav_item( '/' ) Home
-        +nav_item( '/customer' ) Customer
-        +nav_item( '/project' ) Project
-        +nav_item( '/executor' ) Executor
-        +nav_item( '/runningproject' ) RunningProjects
+        +nav_item( '/shop' ) Shop
+        +nav_item( '/product' ) Product
+        +nav_item( '/stock' ) Stock
+        +nav_item( '/productStock' ) Product in Stock
 
     div.main.container
         block content

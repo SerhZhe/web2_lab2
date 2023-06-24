@@ -1,32 +1,26 @@
-const path = require('path')
-
-// встановлюємо express
 const express = require('express')
+const path = require('path')
 const app = express()
-
-// встановлюємо директорію для віддачі статичного контенту (каталог проекту)
+const port = process.env.PORT || 8080
 app.use(express.static(__dirname))
 
-// налаштовуємо роботу із шаблонізаотором
-app.set('views', path.join(__dirname, '/static/views'))
+app.set('views', path.join(__dirname, '/static/views/'))
 app.set('view engine', 'pug')
 
-// налаштовуємо маршрутизацію
 app.get('/', function (request, response) {
   response.render('pages/index', { title: 'Home' })
 })
-app.get('/customer', function (request, response) {
-  response.render('pages/customer', { title: 'Customer' })
+app.get('/shop', function (request, response) {
+  response.render('pages/shop', { title: 'Shop' })
 })
-app.get('/project', function (request, response) {
-  response.render('pages/project', { title: 'Project' })
+app.get('/product', function (request, response) {
+  response.render('pages/product', { title: 'Product' })
 })
-app.get('/executor', function (request, response) {
-  response.render('pages/executor', { title: 'Executor' })
+app.get('/stock', function (request, response) {
+  response.render('pages/stock', { title: 'Stock' })
 })
-app.get('/runningproject', function (request, response) {
-  response.render('pages/running_project', { title: 'Running Projects' })
+app.get('/productStock', function (request, response) {
+  response.render('pages/productStock', { title: 'Product in stock' })
 })
-
-// запускаємо аплікацію
-app.listen(process.env.PORT || 8080)
+app.listen(port)
+console.log(port)

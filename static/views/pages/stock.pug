@@ -1,0 +1,36 @@
+extends ../layout.pug
+
+block prepend styles
+  link(rel='stylesheet' href='//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css')
+
+block content
+  div(class='breadcrumb')
+    li= title
+  form(id='stock-add-form' name='stock-add-form' class='form-inline' action='')
+    div(class='form-group')
+      div(class='col-md-3')
+        label(for='name') Number
+      div(class='col-md-9')
+        input(id='number' name='number' value='' class='form-control')
+      div(class='col-md-9')
+    div(class='form-group')
+      div(class='col-md-3')
+        label(for='name') Shop
+      div(class='col-md-9')
+        input(id='shop' name='shop' value='' class='form-control')
+    div(class='form-group')
+      div(class='col-md-3')
+        label(for='name') Capacity
+      div(class='col-md-9')
+        input(id='capacity' name='capacity' value='' class='form-control')
+    div(class='form-group')
+      div(class='col-md-12')
+        button(type='submit' class='btn btn-primary') Create
+    div.list-wrapper
+      table(id='stock-list')
+block append scripts
+  script(src='/static/js/models/shop.js')
+  script(src='/static/js/models/productStock.js')
+  script(src='/static/js/models/stock.js')
+  script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
+  script(src='/static/js/views/stock.js')

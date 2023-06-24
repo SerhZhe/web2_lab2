@@ -1,50 +1,8 @@
-body {
-  background-color: #EEF1FC !important;
-}
-
-.navbar {
-  background-color: #1848B6 !important;
-}
-
-.navbar .navbar-brand {
-  color: #ffffff !important;
-}
-
-.navbar .nav > li > a {
-  color: #ffffff !important;
-}
-
-.navbar .nav > li.active > a {
-  background-color: #1848B6;
-  color: #ffffff;
-}
-
-.navbar .nav > li > a:hover {
-  background-color: #0c2c76 !important;
-  color: #ffffff !important;
-}
-
 .list-wrapper {
-    margin-top: 20px;
-  }
-  
-  .list-icon {
-    display: inline-block;
-    margin-right: 5px;
-  }
-
-.breadcrumb {
-  background-color: #C8DDFF !important;
+  margin-top: 20px;
 }
 
-
-#edit-modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1040;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+.list-icon {
+  display: inline-block;
+  margin-right: 5px;
 }
